@@ -12,28 +12,36 @@
 <body ng-controller="mainControl">
     <!--<h1>{{name}}</h1>-->
 
-    <div class="input-area">
-        <span>Name:</span> <input ng-model="name"></input>
-        <span>Nice Score:</span> <input type="number" ng-model="niceScore"></input>
-        <span>Naughty Score:</span> <input type="number" ng-model="naughtyScore">    </input>
-        <button ng-click="addNewPerson()">Add</button>
+    <div class="input-area"> 
+        <span>Name:</span>
+        <input ng-model="name"></input>
+        <span>Nice Score:</span>
+        <input type="number" ng-model="niceScore"></input>
+        <span>Naughty Score:</span>
+        <input type="number" ng-model="naughtyScore"> </input>
+        <button class="btn" ng-click="addNewPerson()">Add</button>
     </div>
-        
-      
 
-    <div class="niceList">
-        <h3>Nice List</h3>
-        <div ng-repeat="person in niceList">{{person.name}}</div>
-        <div class="naughtyList">
-            <h3>Naughty List</h3>
-            <div ng-repeat="person in naughtyList">{{person.name}}</div>
+    <br>
+    <div class="lists">
+        <div class="list">
+            Nice List
+            <div ng-repeat="person in niceList">
+                <br> {{person.name}}</div>
+        </div>
 
+        <div class="list">
+            Naughty List
+            <div ng-repeat="person in naughtyList">
+                <br> {{person.name}}</div>
+        </div>
+    </div>
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.js"></script>
-            <script src="js/app.js"></script>
-            <script src="js/controller.js"></script>
-            <script src="js/service.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/service.js"></script>
 </body>
 
 </html>
